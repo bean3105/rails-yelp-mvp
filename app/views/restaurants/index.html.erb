@@ -1,0 +1,9 @@
+<h1>Yelp! Restaurants</h1>
+<span>
+  <% @restaurants.each do|restaurant| %>
+    <h4 class="m-3"><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
+    <p class="m-3">---<em><%= restaurant.category %></em>---</p>
+  <% end %>
+</span>
+
+<%= link_to "➕ Add Restaurant", new_restaurant_path, class: "btn btn-warning" %>
